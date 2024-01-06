@@ -6,12 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Photo Gallery</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
+    <style> 
+     /* Adjust the height of the top image container */
+     .top-image-container {
+            height: 300px; /* Set the height of the top image */
+            overflow: hidden; /* Hide any content that exceeds the set height */
+            position: relative;
+        }
+
+        /* Style adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .top-image-container {
+                height: 200px; /* Adjust the height for smaller screens */
+            }
+        }
+
+        .top-image {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
         .gallery-img {
             padding: 5px;
             height:  auto; /* Set a fixed height for the gallery images */
             overflow: hidden; /* Hide any content that exceeds the set height */
         }
+
 
         .gallery-img img {
             width: 100%;
@@ -22,8 +45,13 @@
 </head>
 
 <body>
+   <!-- Top Image Section -->
+   <div class="top-image-container">
+    <img src="img/lll.avif" alt="Top Image" class="top-image">
+</div>
+
     <div class="container">
-        <h1 class="text-center my-4"></h1>
+        <h1 class="text-center my-4">እንኳን አደረሰሽ የኔ አስተዋይ</h1>
         <div class="row">
             <div class="col-md-4 col-sm-6 gallery-img">
                 <img src="img/photo_2024-01-06_12-15-43.jpg" class="img-fluid">
